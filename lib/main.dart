@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(Provider(create: (_) => AuthorizationProvider(), child: MyApp()));
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AuthorizationProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
